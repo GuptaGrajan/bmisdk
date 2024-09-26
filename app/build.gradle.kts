@@ -6,6 +6,7 @@ plugins {
     id("kotlin-kapt")
     id("kotlin-parcelize")
     id ("maven-publish")
+//    id ("java")
     alias(libs.plugins.hilt.android)
 
 }
@@ -20,7 +21,7 @@ android {
         }
 
     }
-    namespace = "com.app.bmicalculator"
+//    namespace = "com.app.bmicalculator"
     compileSdk = 34
 
 
