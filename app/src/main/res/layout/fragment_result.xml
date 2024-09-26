@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:text="@string/your_result"
+            android:textColor="@color/textColorDark"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progressCL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_default_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTV">
+
+
+            <com.seosh817.circularseekbar.CircularSeekBar
+                android:id="@+id/circularSB"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_15sdp"
+                app:circularSeekBar_animation="normal"
+                app:circularSeekBar_animationDurationMillis="1000"
+                app:circularSeekBar_barWidth="@dimen/_10sdp"
+                app:circularSeekBar_innerThumbRadius="0dp"
+                app:circularSeekBar_innerThumbStrokeWidth="0dp"
+                app:circularSeekBar_max="40"
+                app:circularSeekBar_outerThumbRadius="0dp"
+                app:circularSeekBar_outerThumbStrokeWidth="0dp"
+                app:circularSeekBar_progressGradientColors="@array/rainbow"
+                app:circularSeekBar_startAngle="45"
+                app:circularSeekBar_sweepAngle="270"
+                app:circularSeekBar_trackColor="@color/seek_bar_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/progressTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:gravity="center"
+                android:maxLength="6"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/circularSB"
+                app:layout_constraintEnd_toEndOf="@id/circularSB"
+                app:layout_constraintStart_toStartOf="@id/circularSB"
+                app:layout_constraintTop_toTopOf="@id/circularSB" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/messageTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/textColorDark"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/progressCL"
+            app:layout_constraintStart_toStartOf="@id/progressCL"
+            app:layout_constraintTop_toBottomOf="@id/progressCL" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ageWeightHeightCL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_default_card"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="@+id/messageTV"
+            app:layout_constraintStart_toStartOf="@+id/messageTV"
+            app:layout_constraintTop_toBottomOf="@id/messageTV">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ageTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/weightTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ageValueTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text="@string/age"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/ageTV"
+                app:layout_constraintStart_toStartOf="@id/ageTV"
+                app:layout_constraintTop_toBottomOf="@id/ageTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/weightTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ageTV"
+                app:layout_constraintEnd_toStartOf="@id/heightTV"
+                app:layout_constraintStart_toEndOf="@id/ageTV"
+                app:layout_constraintTop_toTopOf="@id/ageTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/weightValueTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text="@string/weight"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/weightTV"
+                app:layout_constraintStart_toStartOf="@id/weightTV"
+                app:layout_constraintTop_toBottomOf="@id/weightTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heightTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ageTV"
+                app:layout_constraintEnd_toStartOf="@id/genderTV"
+                app:layout_constraintStart_toEndOf="@id/weightTV"
+                app:layout_constraintTop_toTopOf="@id/ageTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heightValueTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text="@string/height"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/heightTV"
+                app:layout_constraintStart_toStartOf="@id/heightTV"
+                app:layout_constraintTop_toBottomOf="@id/heightTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/genderTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ageTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/heightTV"
+                app:layout_constraintTop_toTopOf="@id/ageTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/genderValueTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text="@string/gender"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/genderTV"
+                app:layout_constraintStart_toStartOf="@id/genderTV"
+                app:layout_constraintTop_toBottomOf="@id/genderTV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resultRV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ageWeightHeightCL"
+            app:layout_constraintStart_toStartOf="@+id/ageWeightHeightCL"
+            app:layout_constraintTop_toBottomOf="@+id/ageWeightHeightCL" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

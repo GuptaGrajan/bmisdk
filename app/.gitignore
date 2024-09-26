@@ -1,0 +1,16 @@
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/gradle
+/.idea
+/.DS_Store
+/gradlew
+/*.bat
+/app/build/
+/build/
+
+/app/keystore/
+/app/release/
+/.gradle/

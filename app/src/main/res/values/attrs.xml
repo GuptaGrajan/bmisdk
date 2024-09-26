@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="HoloCircularProgressBar">
+        <attr name="stroke_width" format="dimension" />
+        <attr name="progress" format="float" />
+        <attr name="marker_progress" format="float" />
+        <attr name="progress_color" format="color" />
+        <attr name="progress_background_color" format="color" />
+        <attr name="thumb_visible" format="boolean" />
+        <attr name="marker_visible" format="boolean" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <attr name="circularProgressBarStyle" format="reference" />
+
+
+    <declare-styleable name="BottomPickerImageView">
+        <attr name="foreground" format="reference" />
+        <attr name="fit_mode" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="BottomPickerSquareView">
+        <attr name="matchHeightToWidth" format="boolean" />
+        <attr name="matchWidthToHeight" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ProgressButton">
+        <attr name="buttonText" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ReadMoreTextView">
+        <attr name="trimExpandedText" format="string" />
+        <attr name="trimCollapsedText" format="string" />
+        <attr name="trimLength" format="integer" />
+        <attr name="showTrimExpandedText" format="boolean" />
+        <attr name="colorClickableText" format="color" />
+        <attr name="trimLines" format="integer" />
+        <attr name="trimMode">
+            <enum name="trimModeLine" value="0" />
+            <enum name="trimModeLength" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="AppViews">
+        <attr name="android:text" format="string" />
+        <attr name="android:hint" format="string" />
+        <attr name="android:title" format="string" />
+        <attr name="android:description" format="string" />
+        <attr name="android:includeFontPadding" format="boolean" />
+        <attr name="android:src" />
+        <attr name="android:drawableRight" format="integer" />
+        <attr name="android:maxLines" format="integer" />
+        <attr name="android:maxLength" format="integer" />
+        <attr name="android:ellipsize" />
+        <attr name="android:inputType" />
+        <attr name="android:imeOptions" />
+        <attr name="android:enabled" />
+        <attr name="android:focusable" />
+        <attr name="android:clickable" />
+        <attr name="android:textSize" />
+        <attr name="android:fontFamily" />
+        <attr name="android:textColorHint" />
+        <attr name="android:digits" />
+        <attr name="android:gravity" format="integer" />
+        <attr name="android:padding" format="integer" />
+        <attr name="android:paddingStart" format="integer" />
+        <attr name="android:paddingTop" format="integer" />
+        <attr name="android:paddingBottom" format="integer" />
+        <attr name="android:paddingEnd" format="integer" />
+        <attr name="android:paddingLeft" format="integer" />
+        <attr name="android:paddingRight" format="integer" />
+
+        <attr name="android:minLines" />
+        <attr name="android:singleLine" format="boolean" />
+    </declare-styleable>
+
+</resources>

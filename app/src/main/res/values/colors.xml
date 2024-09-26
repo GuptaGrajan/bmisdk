@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#194D5B</color>
+
+    <color name="green">#5ADC65</color>
+
+    <color name="background">#0B0A24</color>
+    <color name="card_background">#FFF4F1</color>
+    <color name="seek_bar_background">#F6DBD4</color>
+    <color name="selected_card_background">#E8A794</color>
+
+    <color name="stepper">#1C1D34</color>
+    <color name="tint">#8D8E99</color>
+
+    <color name="disableButtonColor">#DACFF8</color>
+
+
+    <color name="transparent">#00FFFFFF</color>
+
+
+    <!--Image picker colors-->
+    <color name="bottompicker_camera">#000</color>
+    <color name="bottompicker_gallery">#ccc</color>
+    <color name="bottompicker_selected">#f0f0f0</color>
+
+
+    <color name="lightBlack">#ff323232</color>
+    <color name="sb__action_bg_color">#1affffff</color>
+    <color name="sb__background">#323232</color>
+
+    <color name="line_gray">#D8D8D8</color>
+    <color name="gray">#BAB8B8</color>
+
+
+    <color name="textColorDark">#12212F</color>
+    <color name="editTextHintColor">#A8A7AD</color>
+    <color name="errorColor">#FF6961</color>
+    <color name="logoutColor">#E74C3C</color>
+    <color name="redLightBG">#FFF1F1</color>
+    <color name="outlineColor">#D5DFEA</color>
+    <color name="viewBg">#DEE7EA</color>
+    <color name="storkColor">#F5F6F9</color>
+    <color name="dashStorkColor">#5F5E67</color>
+    <color name="primaryBGColor">#F9F9FF</color>
+    <color name="notesUserIconColor">#F0C047</color>
+
+    <color name="bugRaisedColor">#27BCFD</color>
+    <color name="bugFixedColor">#00D27A</color>
+    <color name="noOfprojectColor">#1A141F</color>
+
+
+    <color name="red">#FFF44336</color>
+    <color name="orange">#FFFFAB40</color>
+    <color name="yellow">#FFFFEB3B</color>
+    <color name="green_seek">#FF4CAF50</color>
+    <color name="blue">#FF2196F3</color>
+    <color name="indigo">#FF3F51B5</color>
+    <color name="purple">#FF9C27B0</color>
+
+    <!--<array name="rainbow">
+        <item>@color/purple</item>
+        <item>@color/indigo</item>
+        <item>@color/blue</item>
+        <item>@color/green_seek</item>
+        <item>@color/green_seek</item>
+        <item>@color/yellow</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+    </array>-->
+    <array name="rainbow">
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+    </array>
+
+</resources>

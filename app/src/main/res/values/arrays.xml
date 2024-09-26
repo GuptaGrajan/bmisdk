@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="homeTitle">
+        <item>@string/app_name</item>
+    </string-array>
+
+
+    <string-array name="resultPageList">
+        <item>@string/bmi_very_severely_underweight</item>
+        <item>@string/bmi_severely_underweight</item>
+        <item>@string/bmi_underweight</item>
+        <item>@string/bmi_normal</item>
+        <item>@string/bmi_overweight</item>
+        <item>@string/bmi_obese_class_1</item>
+        <item>@string/bmi_obese_class_2</item>
+        <item>@string/bmi_obese_class_3</item>
+    </string-array>
+
+
+    <string-array name="resultPageListValue">
+        <item>@string/bmi_below_16</item>
+        <item>@string/bmi_16_to_16_9</item>
+        <item>@string/bmi_17_to_18_4</item>
+        <item>@string/bmi_18_5_to_24_9</item>
+        <item>@string/bmi_25_to_29_9</item>
+        <item>@string/bmi_30_to_34_9</item>
+        <item>@string/bmi_35_to_39_9</item>
+        <item>@string/bmi_above_39_9</item>
+    </string-array>
+
+    <integer-array name="resultPageListColor">
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+        <item>@color/selected_card_background</item>
+    </integer-array>
+
+
+</resources>
+
+
+
+

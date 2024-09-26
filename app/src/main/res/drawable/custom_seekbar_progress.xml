@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background track -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/_2sdp" />
+            <solid android:color="@color/colorPrimaryDark" /> <!-- Background color -->
+        </shape>
+    </item>
+
+    <!-- Progress bar -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/_2sdp" />
+                <solid android:color="@color/selected_card_background" /> <!-- Progress color -->
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

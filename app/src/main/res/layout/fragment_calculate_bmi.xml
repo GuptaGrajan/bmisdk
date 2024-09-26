@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.app.bmicalculator.utils.HandleClick" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/app_name"
+                android:textColor="@color/textColorDark"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/maleCB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/card_bg_selector"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center|center_vertical"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:text="@string/male"
+                android:textColor="@color/notification_check_box_color"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_male_selector"
+                app:layout_constraintEnd_toStartOf="@id/femaleCB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/femaleCB"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/card_bg_selector"
+                android:button="@null"
+                android:checked="false"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:text="@string/female"
+                android:textColor="@color/notification_check_box_color"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_female_selector"
+                app:layout_constraintBottom_toBottomOf="@id/maleCB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/maleCB"
+                app:layout_constraintTop_toTopOf="@id/maleCB" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heightTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/height"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorDark"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/maleCB"
+                app:layout_constraintTop_toBottomOf="@+id/maleCB"
+                app:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/heightTxtET"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:minWidth="@dimen/_100sdp"
+                android:text="@string/_0cm"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/heightTV"
+                app:layout_constraintEnd_toEndOf="@id/femaleCB"
+                app:layout_constraintTop_toTopOf="@id/heightTV" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/heightCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_default_card"
+                android:paddingVertical="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="@id/femaleCB"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="@id/maleCB"
+                app:layout_constraintTop_toBottomOf="@+id/heightTV">
+
+
+                <SeekBar
+                    android:id="@+id/Seekbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:max="220"
+                    android:maxHeight="@dimen/_4sdp"
+                    android:minHeight="@dimen/_4sdp"
+                    android:progressBackgroundTint="@color/colorPrimaryDark"
+                    android:progressDrawable="@drawable/custom_seekbar_progress"
+                    android:progressTint="@color/selected_card_background"
+                    android:thumbTint="@color/selected_card_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ageTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:text="@string/age"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorDark"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/maleCB"
+                app:layout_constraintTop_toBottomOf="@+id/heightCL"
+                app:textAllCaps="true" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ageCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_default_card"
+                android:padding="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_background"
+                app:layout_constraintEnd_toStartOf="@id/weightCL"
+                app:layout_constraintHorizontal_weight=".9"
+                app:layout_constraintStart_toStartOf="@id/maleCB"
+                app:layout_constraintTop_toBottomOf="@id/ageTV">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ageMinusIV"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="0dp"
+                    android:contentDescription="@string/minus"
+                    android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ageET"
+                    app:layout_constraintEnd_toStartOf="@id/ageET"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ageET"
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ageET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/_19"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/agePlusIV"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/ageMinusIV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/agePlusIV"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="0dp"
+                    android:contentDescription="@string/plus"
+                    android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ageET"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/ageET"
+                    app:layout_constraintTop_toTopOf="@id/ageET"
+                    app:srcCompat="@drawable/ic_plus" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/weightTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/weight"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorDark"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ageTV"
+                app:layout_constraintStart_toStartOf="@id/weightCL"
+                app:layout_constraintTop_toTopOf="@id/ageTV"
+                app:textAllCaps="true" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weightCL"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_default_card"
+                android:padding="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_background"
+                app:layout_constraintBottom_toBottomOf="@id/ageCL"
+                app:layout_constraintEnd_toEndOf="@id/femaleCB"
+                app:layout_constraintHorizontal_weight="1.1"
+                app:layout_constraintStart_toEndOf="@id/ageCL"
+                app:layout_constraintTop_toTopOf="@id/ageCL">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/weightTxtET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:minWidth="@dimen/_50sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/_50"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/weightPlusIV"
+                    app:layout_constraintStart_toEndOf="@id/weightMinusIV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/weightMinusIV"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="0dp"
+                    android:contentDescription="@string/minus"
+                    android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/weightTxtET"
+                    app:layout_constraintEnd_toStartOf="@id/weightTxtET"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/weightTxtET"
+                    app:srcCompat="@drawable/ic_minus" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/weightPlusIV"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="0dp"
+                    android:contentDescription="@string/plus"
+                    android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/weightTxtET"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/weightTxtET"
+                    app:layout_constraintTop_toTopOf="@id/weightTxtET"
+                    app:srcCompat="@drawable/ic_plus" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calculateBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:backgroundTint="@color/colorAccent"
+                android:onClick="@{(view) -> handleClick.onClickHandle(view)}"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/calculate"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

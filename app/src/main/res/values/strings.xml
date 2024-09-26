@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+
+    <string name="_18_5_25_kg_m2">18.5 – 25 kg/m²</string>
+    <string name="normal_bmi_range">Normal BMI range:</string>
+    <string name="recalculate">Recalculate your BMI</string>
+    <string name="calculate_your_bmi">Calculate your BMI</string>
+    <string name="calculate">Calculate</string>
+    <string name="weight">Weight</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="plus">plus</string>
+    <string name="minus">minus</string>
+    <string name="_0cm">220cm</string>
+    <string name="_165cm">165cm</string>
+    <string name="_50">50Kg</string>
+    <string name="_19">19</string>
+    <string name="your_result">Your BMI Result</string>
+    <string name="cm">cm</string>
+    <string name="share">share your Result</string>
+    <string name="your_age">your Age:</string>
+
+    <!--Base project String -->
+    <string name="press_one_more_time">Press one more time to push app into background</string>
+    <string name="not_sufficient_permissions">Not sufficient permissions \n Goto Settings></string>
+    <string name="permissions">Permissions</string>
+    <string name="internet_connection">Internet Connection seems to be offline. Please check you Internet Connectivity.</string>
+    <string name="this_device_is_not_supported">This Device is not supported Google Play services</string>
+    <string name="location_setting">Location Settings</string>
+    <string name="location_setting_enable_message">Location is not enabled. Do you want to enable it from settings menu?</string>
+    <string name="not_connected_to_internet">Not connected to Internet</string>
+    <string name="poor_internet_connection">Poor internet connection</string>
+    <string name="retry_caps" translatable="false">RETRY</string>
+    <string name="gender">Gender</string>
+
+    <string name="bmi_very_severely_underweight">Very severely underweight</string>
+    <string name="bmi_severely_underweight">Severely underweight</string>
+    <string name="bmi_underweight">Underweight</string>
+    <string name="bmi_normal">Normal</string>
+    <string name="bmi_overweight">Overweight</string>
+    <string name="bmi_obese_class_1">Obese class I</string>
+    <string name="bmi_obese_class_2">Obese class II</string>
+    <string name="bmi_obese_class_3">Obese class III</string>
+
+    <string name="bmi_below_16">&lt;16</string>
+    <string name="bmi_16_to_16_9">16.0 – 16.9</string>
+    <string name="bmi_17_to_18_4">17.0 – 18.4</string>
+    <string name="bmi_18_5_to_24_9">18.5 – 24.9</string>
+    <string name="bmi_25_to_29_9">25.0 – 29.9</string>
+    <string name="bmi_30_to_34_9">30.0 – 34.9</string>
+    <string name="bmi_35_to_39_9">35.0 – 39.9</string>
+    <string name="bmi_above_39_9">&gt;39.9</string>
+    <string name="you_have">You have</string>
+    <string name="you_are">You are</string>
+    <string name="body_weight">body weight!</string>
+
+    <!--<string name="gender">Very severely underweight</string>
+    <string name="gender">Severely underweight</string>
+    <string name="gender">Underweight</string>
+    <string name="gender">Normal</string>
+    <string name="gender">Overweight</string>
+    <string name="gender">Obese class I</string>
+    <string name="gender">Obese class II</string>
+    <string name="gender">Obese class III</string>
+    <string name="gender"> <16</string>
+    <string name="gender">16.0-16.9</string>
+    <string name="gender">17.0-18.4</string>
+    <string name="gender">18.5-24.9</string>
+    <string name="gender">25.0-29.9</string>
+    <string name="gender">30.0-34.9</string>
+    <string name="gender">35.0-39.9</string>
+    <string name="gender">>39.9</string>-->
+
+
+</resources>
