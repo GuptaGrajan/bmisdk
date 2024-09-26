@@ -5,6 +5,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    id ("maven-publish")
     alias(libs.plugins.hilt.android)
 
 }
