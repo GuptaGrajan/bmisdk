@@ -5,6 +5,7 @@ plugins {
     id("kotlin-kapt")
     id("kotlin-parcelize")
     id ("maven-publish")
+    id("com.google.devtools.ksp")
     alias(libs.plugins.hilt.android)
 
 }
@@ -63,6 +64,7 @@ publishing {
     }
 }
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -83,6 +85,7 @@ dependencies {
     // Glide
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
+    kapt (libs.compiler)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.extensions)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
