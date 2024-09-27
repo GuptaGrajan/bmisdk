@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.hilt.android) apply false
     alias(libs.plugins.maven.publish) apply false
     alias(libs.plugins.android.maven) apply false
+    id ("maven-publish")
     id("com.google.devtools.ksp") version "2.0.20-1.0.25" apply false
     kotlin("jvm") version "2.0.20"
 
