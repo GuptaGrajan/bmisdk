@@ -6,7 +6,6 @@ plugins {
     id("kotlin-kapt")
     id("kotlin-parcelize")
     id ("maven-publish")
-//    id ("java")
     alias(libs.plugins.hilt.android)
 
 }
@@ -21,7 +20,7 @@ android {
         }
 
     }
-//    namespace = "com.app.bmicalculator"
+    namespace = "com.app.bmicalculator"
     compileSdk = 34
 
 
@@ -62,7 +61,15 @@ android {
     }
 
 }
-
+publishing{
+    publications{
+        register<MavenPublication>("release"){
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
