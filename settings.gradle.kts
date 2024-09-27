@@ -26,4 +26,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "BMI SDK"
 include(":app")
- 

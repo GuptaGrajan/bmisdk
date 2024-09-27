@@ -344,6 +344,24 @@
     </issue>
 
     <issue
+        id="KaptUsageInsteadOfKsp"
+        severity="Warning"
+        message="This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp"
+        category="Performance"
+        priority="4"
+        summary="Kapt usage should be replaced with KSP"
+        explanation="KSP is a more efficient replacement for kapt. For libraries that support both, KSP should be used to improve build times."
+        url="https://developer.android.com/studio/build/migrate-to-ksp"
+        urls="https://developer.android.com/studio/build/migrate-to-ksp"
+        errorLine1="    kapt (libs.compiler)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\sdafaf\bmisdk\app\build.gradle.kts"
+            line="88"
+            column="5"/>
+    </issue>
+
+    <issue
         id="IconDensities"
         severity="Warning"
         message="Missing the following drawables in `drawable-hdpi`: gallery_photo_selected.xml, ic_clear.png, img_error.png"

@@ -147,6 +147,16 @@ D:\sdafaf\bmisdk\app\src\main\res\drawable\ic_launcher_foreground.xml:26: Warnin
    * Using the Android Studio vector conversion tool
    * Rasterizing the image (converting to PNG)
 
+D:\sdafaf\bmisdk\app\build.gradle.kts:88: Warning: This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp [KaptUsageInsteadOfKsp]
+    kapt (libs.compiler)
+    ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KaptUsageInsteadOfKsp":
+   KSP is a more efficient replacement for kapt. For libraries that support
+   both, KSP should be used to improve build times.
+
+   https://developer.android.com/studio/build/migrate-to-ksp
+
 D:\sdafaf\bmisdk\app\src\main\res\drawable-hdpi: Warning: Missing the following drawables in drawable-hdpi: gallery_photo_selected.xml, ic_clear.png, img_error.png [IconDensities]
 D:\sdafaf\bmisdk\app\src\main\res\drawable-xhdpi: Warning: Missing the following drawables in drawable-xhdpi: gallery_photo_selected.xml, img_error.png [IconDensities]
 D:\sdafaf\bmisdk\app\src\main\res\drawable-xxhdpi: Warning: Missing the following drawables in drawable-xxhdpi: gallery_photo_selected.xml, ic_clear.png, img_error.png [IconDensities]
@@ -217,4 +227,4 @@ D:\sdafaf\bmisdk\app\src\main\AndroidManifest.xml: Warning: The project referenc
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 29 warnings
+0 errors, 30 warnings

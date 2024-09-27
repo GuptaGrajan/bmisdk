@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 29 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 30 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Fri Sep 27 13:04:47 IST 2024 by AGP (8.5.2)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Fri Sep 27 13:55:09 IST 2024 by AGP (8.5.2)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -194,6 +194,7 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#Recycle"><i class="material-icons warning-icon">warning</i>Missing <code>recycle()</code> calls (1)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (7)</a>
       <a class="mdl-navigation__link" href="#VectorPath"><i class="material-icons warning-icon">warning</i>Long vector paths (4)</a>
+      <a class="mdl-navigation__link" href="#KaptUsageInsteadOfKsp"><i class="material-icons warning-icon">warning</i>Kapt usage should be replaced with KSP (1)</a>
       <a class="mdl-navigation__link" href="#IconDensities"><i class="material-icons warning-icon">warning</i>Icon densities validation (3)</a>
       <a class="mdl-navigation__link" href="#IconMissingDensityFolder"><i class="material-icons warning-icon">warning</i>Missing density folder (1)</a>
       <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (3)</a>
@@ -238,6 +239,9 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#VectorPath">VectorPath</a>: Long vector paths</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#KaptUsageInsteadOfKsp">KaptUsageInsteadOfKsp</a>: Kapt usage should be replaced with KSP</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
 </td></tr>
 <tr>
@@ -757,6 +761,52 @@ Using long vector paths is bad for performance. There are several ways to make t
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationVectorPathLink" onclick="reveal('explanationVectorPath');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="VectorPathCardLink" onclick="hideid('VectorPathCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="KaptUsageInsteadOfKsp"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="KaptUsageInsteadOfKspCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Kapt usage should be replaced with KSP</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:88</span>: <span class="message">This library supports using KSP instead of kapt, which greatly improves performance. Learn more: <a href="https://developer.android.com/studio/build/migrate-to-ksp">https://developer.android.com/studio/build/migrate-to-ksp</a></span><br /><pre class="errorlines">
+<span class="lineno"> 85 </span>    // Glide
+<span class="lineno"> 86 </span>    implementation(libs.glide)
+<span class="lineno"> 87 </span>    annotationProcessor(libs.compiler)
+<span class="caretline"><span class="lineno"> 88 </span>    <span class="warning">kapt (libs.compiler)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 89 </span>    implementation(libs.androidx.lifecycle.livedata.ktx)
+<span class="lineno"> 90 </span>    implementation(libs.androidx.lifecycle.extensions)
+<span class="lineno"> 91 </span>    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationKaptUsageInsteadOfKsp" style="display: none;">
+KSP is a more efficient replacement for kapt. For libraries that support both, KSP should be used to improve build times.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/studio/build/migrate-to-ksp">https://developer.android.com/studio/build/migrate-to-ksp</a>
+</div>To suppress this error, use the issue id "KaptUsageInsteadOfKsp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">KaptUsageInsteadOfKsp</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationKaptUsageInsteadOfKspLink" onclick="reveal('explanationKaptUsageInsteadOfKsp');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="KaptUsageInsteadOfKspCardLink" onclick="hideid('KaptUsageInsteadOfKspCard');">
 Dismiss</button>            </div>
             </div>
           </section>
