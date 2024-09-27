@@ -15,8 +15,10 @@ android {
 
 
     defaultConfig {
-        minSdk = 24
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        aarMetadata {
+            minSdk = 24
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
     }
 
     buildFeatures {
@@ -33,7 +35,18 @@ android {
             )
         }
     }
-    compileOptions {
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)        // << --- ADD This
+        }
+    }
+
+    compileOptions  {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    java {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
@@ -47,17 +60,23 @@ android {
         }
     }
 
+
 }
 publishing {
     publications {
         register<MavenPublication>("release") {
             afterEvaluate {
-                from(components["release"])
                 groupId = "com.github.GuptaGrajan" // Your GitHub username or organization
                 artifactId = "bmisdk" // Your library's artifact ID
-                version = "1.0.6" // Your library's version
+                version = "1.0.7" // Your library's version
+                from(components["release"])
             }
         }
+//        https://github.com/GuptaGrajan/bmisdk.git
+        repositories {
+            mavenLocal()
+        }
+
     }
 }
 dependencies {
