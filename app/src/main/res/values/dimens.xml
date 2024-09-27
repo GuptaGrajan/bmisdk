@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="bottompicker_grid_layout_margin">1dp</dimen>
-    <dimen name="bottompicker_selected_image_height">90dp</dimen>
 
     <dimen name="_280dp">280.00dp</dimen>
     <dimen name="sb__max_width">568dp</dimen>

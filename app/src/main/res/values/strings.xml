@@ -1,10 +1,6 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
 
-    <string name="_18_5_25_kg_m2">18.5 – 25 kg/m²</string>
-    <string name="normal_bmi_range">Normal BMI range:</string>
-    <string name="recalculate">Recalculate your BMI</string>
-    <string name="calculate_your_bmi">Calculate your BMI</string>
     <string name="calculate">Calculate</string>
     <string name="weight">Weight</string>
     <string name="age">Age</string>
@@ -14,13 +10,10 @@
     <string name="plus">plus</string>
     <string name="minus">minus</string>
     <string name="_0cm">220cm</string>
-    <string name="_165cm">165cm</string>
     <string name="_50">50Kg</string>
     <string name="_19">19</string>
     <string name="your_result">Your BMI Result</string>
     <string name="cm">cm</string>
-    <string name="share">share your Result</string>
-    <string name="your_age">your Age:</string>
 
     <!--Base project String -->
     <string name="press_one_more_time">Press one more time to push app into background</string>
