@@ -1,6 +1,5 @@
 plugins {
     id ("com.android.library")
-//    alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-android")
     id("kotlin-kapt")
@@ -11,28 +10,13 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        create("release") {
-            /*keyAlias = "bmi2024"
-            keyPassword = "bmi2024"
-            storeFile = file("D:\\BMI Calculator\\app\\keystore\\bmiKey.jks")
-            storePassword = "bmi2024"*/
-        }
-
-    }
     namespace = "com.app.bmicalculator"
     compileSdk = 34
 
 
 
     defaultConfig {
-//        applicationId = "com.app.bmicalculator"
         minSdk = 24
-        //noinspection OldTargetApi
-//        targetSdk = 34
-//        versionCode = 1
-//        versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -44,12 +28,10 @@ android {
         release {
             isMinifyEnabled = false
             isShrinkResources = false
-//            isDebuggable = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
@@ -59,12 +41,21 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 
 }
-publishing{
-    publications{
-        register<MavenPublication>("release"){
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.GuptaGrajan" // Your GitHub username or organization
+            artifactId = "bmisdk" // Your library's artifact ID
+            version = "1.0.0" // Your library's version
+
             afterEvaluate {
                 from(components["release"])
             }
