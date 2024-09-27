@@ -1,6 +1,13 @@
+version: 2.0
+
 jdk:
   - openjdk21
 
 before_install:
   - sdk install java 21.0.4-oracle
   - sdk use java 21.0.4-oracle
+
+build:
+  maven: # or use gradle if that's your build tool
+    goals: clean install
+    options: -Dmaven.test.skip=true # Optional: skip tests during build
