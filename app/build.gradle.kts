@@ -51,12 +51,11 @@ android {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.github.GuptaGrajan" // Your GitHub username or organization
-            artifactId = "bmisdk" // Your library's artifact ID
-            version = "1.0.5" // Your library's version
-
             afterEvaluate {
                 from(components["release"])
+                groupId = "com.github.GuptaGrajan" // Your GitHub username or organization
+                artifactId = "bmisdk" // Your library's artifact ID
+                version = "1.0.6" // Your library's version
             }
         }
     }
