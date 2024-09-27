@@ -5,7 +5,6 @@ plugins {
     id("kotlin-kapt")
     id("kotlin-parcelize")
     id ("maven-publish")
-    id("com.google.devtools.ksp")
     alias(libs.plugins.hilt.android)
 
 }
@@ -55,7 +54,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.GuptaGrajan" // Your GitHub username or organization
             artifactId = "bmisdk" // Your library's artifact ID
-            version = "1.0.0" // Your library's version
+            version = "1.0.5" // Your library's version
 
             afterEvaluate {
                 from(components["release"])
@@ -85,7 +84,6 @@ dependencies {
     // Glide
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
-    kapt (libs.compiler)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.extensions)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
